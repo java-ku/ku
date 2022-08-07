@@ -1,4 +1,8 @@
 rootProject.name = 'ku'
 
-include "ku-employee"
+include "ku-company"
 include "ku-common"
+include "ku-employee"
+include "ku-gateway"
+include "ku-labour-market"
+include "ku-user"
