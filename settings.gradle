@@ -1,0 +1,4 @@
+rootProject.name = 'ku'
+
+include "ku-employee"
+include "ku-common"
