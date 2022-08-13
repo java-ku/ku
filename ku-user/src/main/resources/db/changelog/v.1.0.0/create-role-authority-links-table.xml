@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-role_authority_links-table" author="yuryeu">
+        <createTable tableName="role_authority_links">
+            <column name="role_id" type="int">
+                <constraints foreignKeyName="role_id_authority_id_link" references="role(id)"/>
+            </column>
+            <column name="authority_id" type="int">
+                <constraints foreignKeyName="authority_id_role_id_link" references="authority(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
