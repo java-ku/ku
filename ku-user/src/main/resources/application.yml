@@ -1,1 +1,15 @@
-
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ku_user?currectSchema=public
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    database: POSTGRESQL
+    show-sql: true
